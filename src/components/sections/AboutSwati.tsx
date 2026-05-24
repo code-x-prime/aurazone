@@ -23,7 +23,7 @@ export function AboutSwati() {
             ✦ The Founder ✦
           </p>
           <h2 className="font-display text-4xl md:text-6xl text-gold-gradient">
-            Meet Swati bhatt
+            Meet Swati Bhatt
           </h2>
           <p className="mt-4 font-serif text-xl md:text-2xl text-mystic-mist">
             Your guide through the cosmic veil
@@ -86,7 +86,7 @@ export function AboutSwati() {
                   SB
                 </span>
                 <span className="absolute bottom-[15%] font-serif text-[10px] sm:text-xs text-mystic-mist tracking-widest">
-                  Swati bhatt
+                  Swati Bhatt
                 </span>
               </div>
             </div>

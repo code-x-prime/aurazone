@@ -9,7 +9,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative min-h-screen flex items-center pt-32 pb-24 px-5 md:px-10 overflow-hidden"
+      className="relative min-h-screen flex items-center pt-24 pb-16 px-5 md:px-10 overflow-hidden"
     >
       {/* Red blood glow — bottom-right behind cards */}
       <div
@@ -29,15 +29,15 @@ export function Hero() {
             "radial-gradient(circle, rgba(139, 0, 0, 0.22) 0%, transparent 70%)",
         }}
       />
-      <div className="relative mx-auto grid w-full max-w-7xl grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-10 items-center">
+      <div className="relative mx-auto grid w-full max-w-7xl grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 lg:gap-10 items-center">
         {/* LEFT — copy */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="lg:col-span-7 relative z-10 order-2 lg:order-1"
+          className="lg:col-span-7 relative z-10 order-2 lg:order-1 text-center lg:text-left"
         >
-          <div className="flex items-center gap-3 mb-10">
+          <div className="flex items-center justify-center lg:justify-start gap-3 mb-8 md:mb-10">
             <span className="h-px w-10 bg-gradient-to-r from-transparent to-gold-primary/70" />
             <span className="font-display text-[10px] md:text-xs tracking-[0.4em] uppercase flex items-center gap-2">
               <IconSparkles size={12} stroke={1.5} className="text-gold-primary" />
@@ -54,14 +54,14 @@ export function Hero() {
           </h1>
 
           {/* gold-to-red accent bar */}
-          <div className="mt-7 h-[2px] w-16 rounded-full bg-gradient-to-r from-gold-primary via-gold-soft to-red-accent" />
+          <div className="mt-7 h-[2px] w-16 rounded-full bg-gradient-to-r from-gold-primary via-gold-soft to-red-accent mx-auto lg:mx-0" />
 
-          <p className="mt-6 max-w-xl font-serif text-lg md:text-xl text-mystic-mist text-pretty">
+          <p className="mt-6 max-w-xl font-serif text-lg md:text-xl text-mystic-mist text-pretty mx-auto lg:mx-0">
             Where the stars speak through the cards — guided readings for love,
             career, marriage and the questions you carry quietly.
           </p>
 
-          <div className="mt-12 flex flex-wrap gap-4">
+          <div className="mt-10 md:mt-12 flex flex-wrap gap-4 justify-center lg:justify-start">
             <Button as="a" href="#contact" size="lg">
               Book a Reading
             </Button>
@@ -70,7 +70,7 @@ export function Hero() {
             </Button>
           </div>
 
-          <div className="mt-14 grid grid-cols-2 gap-x-6 gap-y-5 sm:flex sm:flex-wrap sm:items-center sm:gap-x-8 sm:gap-y-3 text-mystic-mist max-w-md sm:max-w-none">
+          <div className="mt-10 md:mt-14 grid grid-cols-2 gap-x-6 gap-y-5 sm:flex sm:flex-wrap sm:items-center sm:gap-x-8 sm:gap-y-3 text-mystic-mist max-w-md mx-auto lg:mx-0 sm:max-w-none justify-items-center sm:justify-items-start">
             <Stat n="2000+" label="Readings" />
             <Dot />
             <Stat n="4.9★" label="Avg. Rating" />
@@ -82,7 +82,7 @@ export function Hero() {
         </motion.div>
 
         {/* RIGHT — card stage */}
-        <div className="lg:col-span-5 relative order-1 lg:order-2">
+        <div className="lg:col-span-5 relative order-1 lg:order-2 w-full">
           <CardStage />
         </div>
       </div>
@@ -102,7 +102,7 @@ export function Hero() {
 
 function CardStage() {
   return (
-    <div className="relative mx-auto w-full max-w-[480px] h-[280px] sm:h-[360px] lg:h-[440px]">
+    <div className="relative mx-auto w-full max-w-[380px] sm:max-w-[480px] lg:max-w-[600px] h-[380px] sm:h-[420px] lg:h-[480px] overflow-visible">
       {/* soft radial gold glow background */}
       <div
         className="pointer-events-none absolute inset-0"
@@ -151,8 +151,8 @@ function CardStage() {
       <div className="hidden lg:flex absolute inset-0 items-center justify-center">
         <FannedCard
           symbol="moon"
-          rotate={-12}
-          offsetX={-130}
+          rotate={-14}
+          offsetX={-95}
           delay={0}
           z={1}
         />
@@ -166,8 +166,8 @@ function CardStage() {
         />
         <FannedCard
           symbol="magician"
-          rotate={12}
-          offsetX={130}
+          rotate={14}
+          offsetX={95}
           delay={1}
           z={2}
         />
@@ -193,7 +193,7 @@ function FannedCard({
   featured?: boolean;
   mobile?: boolean;
 }) {
-  const widthClass = mobile ? "w-[160px]" : "w-[200px] xl:w-[220px]";
+  const widthClass = mobile ? "w-[200px]" : "w-[155px] xl:w-[240px]";
   const glowClass = featured
     ? "drop-shadow-[0_0_35px_rgba(232,197,71,0.55)]"
     : "drop-shadow-[0_0_22px_rgba(139,0,0,0.4)]";
@@ -227,7 +227,7 @@ function FannedCard({
 
 function Stat({ n, label }: { n: string; label: string }) {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col items-center sm:items-start">
       <span className="font-display text-lg sm:text-xl text-gold-soft">{n}</span>
       <span className="text-[10px] uppercase tracking-[0.2em] sm:tracking-[0.25em]">{label}</span>
     </div>

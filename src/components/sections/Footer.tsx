@@ -57,7 +57,7 @@ export function Footer() {
             </div>
             <p className="font-serif text-mystic-mist text-sm leading-relaxed">
               Where the stars speak through the cards. Certified tarot readings
-              and spiritual guidance by Swati bhatt.
+              and spiritual guidance by Swati Bhatt.
             </p>
             <div className="mt-6 flex gap-3">
               {SOCIALS.map((s, i) => {
@@ -150,7 +150,7 @@ export function Footer() {
 
         <div className="mt-14 pt-6 border-t border-gold-primary/20 flex flex-col md:flex-row items-center justify-between gap-3">
           <p className="text-xs text-mystic-mist flex items-center gap-2">
-            © 2026 Aurazone · Crafted with intention by Swati bhatt
+            © 2026 Aurazone · Crafted with intention by Swati Bhatt
             <IconMoon size={12} stroke={1.5} className="text-gold-soft inline" />
           </p>
           <div className="flex gap-5 text-[10px] uppercase tracking-[0.3em] text-mystic-mist/70">
