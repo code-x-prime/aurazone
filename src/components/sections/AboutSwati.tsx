@@ -154,16 +154,7 @@ export function AboutSwati() {
 
             {/* Signature */}
             <div className="mt-10 flex items-center gap-4">
-              <svg width="160" height="48" viewBox="0 0 160 48" className="text-gold-soft">
-                <path
-                  d="M5 35 Q15 10, 28 30 T55 25 Q70 18, 80 30 Q90 38, 105 22 T140 28 L155 24"
-                  stroke="currentColor"
-                  strokeWidth="1.4"
-                  fill="none"
-                  strokeLinecap="round"
-                />
-                <circle cx="155" cy="24" r="2" fill="currentColor" />
-              </svg>
+
               <span className="font-serif text-mystic-mist text-sm">
                 — Swati
               </span>
