@@ -23,7 +23,7 @@ export function AboutSwati() {
             ✦ The Founder ✦
           </p>
           <h2 className="font-display text-4xl md:text-6xl text-gold-gradient">
-            Meet Swati Bhatt
+            Meet Swati bhatt
           </h2>
           <p className="mt-4 font-serif text-xl md:text-2xl text-mystic-mist">
             Your guide through the cosmic veil
@@ -86,7 +86,7 @@ export function AboutSwati() {
                   SB
                 </span>
                 <span className="absolute bottom-[15%] font-serif text-[10px] sm:text-xs text-mystic-mist tracking-widest">
-                  swati bhatt
+                  Swati bhatt
                 </span>
               </div>
             </div>
@@ -102,7 +102,7 @@ export function AboutSwati() {
           >
             <div className="space-y-5 text-mystic-mist text-base md:text-lg leading-relaxed">
               <p>
-                <span className="font-display text-2xl text-gold-soft float-left mr-3 leading-none">
+                <span className="font-display text-2xl text-gold-soft float-left  leading-none">
                   E
                 </span>
                 ight years ago, I sat across from my first client — a woman who
@@ -112,7 +112,7 @@ export function AboutSwati() {
               </p>
               <p>
                 Today, with twelve certifications across tarot, numerology and
-                energy healing — and more than five hundred souls guided — my
+                energy healing — and more than two thousand souls guided — my
                 purpose remains the same: to hold space where the cards can
                 speak honestly, and you can listen without fear.
               </p>
@@ -130,20 +130,18 @@ export function AboutSwati() {
             <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-6">
               {[
                 { n: "8+", l: "Years", red: false },
-                { n: "500+", l: "Clients", red: true },
+                { n: "2000+", l: "Clients", red: true },
                 { n: "12", l: "Certifications", red: false },
                 { n: "4.9★", l: "Rating", red: true },
               ].map((s) => (
                 <div
                   key={s.l}
-                  className={`text-center md:text-left border-l-2 pl-4 ${
-                    s.red ? "border-red-accent/60" : "border-gold-primary/40"
-                  }`}
+                  className={`text-center md:text-left border-l-2 pl-4 ${s.red ? "border-red-accent/60" : "border-gold-primary/40"
+                    }`}
                 >
                   <div
-                    className={`font-display text-3xl ${
-                      s.red ? "text-red-glow" : "text-gold-gradient"
-                    }`}
+                    className={`font-display text-3xl ${s.red ? "text-red-glow" : "text-gold-gradient"
+                      }`}
                   >
                     {s.n}
                   </div>

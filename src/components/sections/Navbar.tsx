@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { IconMenu2, IconX, IconMoon } from "@tabler/icons-react";
+import Image from "next/image";
+import { IconMenu2, IconX } from "@tabler/icons-react";
 import { Button } from "@/components/ui/Button";
 
 const LINKS = [
@@ -46,14 +47,13 @@ export function Navbar() {
             className="group flex items-center gap-2.5"
             aria-label="Aurazone home"
           >
-            <IconMoon
-              size={20}
-              stroke={1.5}
-              className="text-gold-primary transition-transform group-hover:rotate-12"
+            <Image
+              src="/logo.jpeg"
+              alt="Aurazone"
+              width={52}
+              height={52}
+              className="rounded-full object-cover ring-2 ring-gold-primary/70 shadow-[0_0_12px_rgba(212,175,55,0.4)] transition-transform duration-300 group-hover:scale-105"
             />
-            <span className="font-display text-lg md:text-xl tracking-[0.3em] text-gold-gradient font-semibold">
-              AURAZONE
-            </span>
           </a>
 
           <ul className="hidden md:flex items-center gap-9">

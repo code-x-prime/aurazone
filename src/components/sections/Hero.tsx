@@ -71,7 +71,7 @@ export function Hero() {
           </div>
 
           <div className="mt-14 grid grid-cols-2 gap-x-6 gap-y-5 sm:flex sm:flex-wrap sm:items-center sm:gap-x-8 sm:gap-y-3 text-mystic-mist max-w-md sm:max-w-none">
-            <Stat n="500+" label="Readings" />
+            <Stat n="2000+" label="Readings" />
             <Dot />
             <Stat n="4.9★" label="Avg. Rating" />
             <Dot />
@@ -139,9 +139,7 @@ function CardStage() {
       {/* MOBILE — single center card */}
       <div className="absolute inset-0 lg:hidden flex items-center justify-center">
         <FannedCard
-          symbol="star"
-          label="The Star"
-          arcana="XVII"
+          symbol="pentacles"
           rotate={0}
           offsetX={0}
           delay={0.2}
@@ -153,17 +151,13 @@ function CardStage() {
       <div className="hidden lg:flex absolute inset-0 items-center justify-center">
         <FannedCard
           symbol="moon"
-          label="The Moon"
-          arcana="XVIII"
           rotate={-12}
           offsetX={-130}
           delay={0}
           z={1}
         />
         <FannedCard
-          symbol="star"
-          label="The Star"
-          arcana="XVII"
+          symbol="pentacles"
           rotate={0}
           offsetX={0}
           delay={0.5}
@@ -171,9 +165,7 @@ function CardStage() {
           featured
         />
         <FannedCard
-          symbol="sun"
-          label="The Sun"
-          arcana="XIX"
+          symbol="magician"
           rotate={12}
           offsetX={130}
           delay={1}
@@ -186,8 +178,6 @@ function CardStage() {
 
 function FannedCard({
   symbol,
-  label,
-  arcana,
   rotate,
   offsetX,
   delay,
@@ -195,9 +185,7 @@ function FannedCard({
   featured = false,
   mobile = false,
 }: {
-  symbol: "moon" | "star" | "sun";
-  label: string;
-  arcana: string;
+  symbol: "moon" | "star" | "sun" | "pentacles" | "magician";
   rotate: number;
   offsetX: number;
   delay: number;
@@ -231,7 +219,7 @@ function FannedCard({
           ease: "easeInOut",
         }}
       >
-        <TarotCardArt symbol={symbol} label={label} arcana={arcana} />
+        <TarotCardArt symbol={symbol} />
       </motion.div>
     </motion.div>
   );

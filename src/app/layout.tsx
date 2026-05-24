@@ -29,12 +29,12 @@ const moonFavicon =
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://aurazone.in"),
-  title: "Aurazone — Tarot Readings by Swati Bhatt | Spiritual Guidance",
+  title: "Aurazone — Tarot Readings by Swati bhatt | Spiritual Guidance",
   description:
-    "Discover clarity through certified tarot card readings with Swati Bhatt. Love, career, marriage & life guidance. 500+ readings · 8+ years experience. Book your session today.",
+    "Discover clarity through certified tarot card readings with Swati bhatt. Love, career, marriage & life guidance. 500+ readings · 8+ years experience. Book your session today.",
   keywords: [
     "tarot reader india",
-    "swati bhatt",
+    "Swati bhatt",
     "aurazone",
     "online tarot reading",
     "love reading",
@@ -42,8 +42,8 @@ export const metadata: Metadata = {
     "spiritual healing",
     "marriage compatibility tarot",
   ],
-  authors: [{ name: "Swati Bhatt" }],
-  creator: "Swati Bhatt",
+  authors: [{ name: "Swati bhatt" }],
+  creator: "Swati bhatt",
   icons: {
     icon: moonFavicon,
     shortcut: moonFavicon,
@@ -56,11 +56,11 @@ export const metadata: Metadata = {
     siteName: "Aurazone",
     title: "Aurazone — Where the Stars Speak Through the Cards",
     description:
-      "Certified tarot readings by Swati Bhatt. Clarity on love, career, marriage & life. Online consultations worldwide.",
+      "Certified tarot readings by Swati bhatt. Clarity on love, career, marriage & life. Online consultations worldwide.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Aurazone — Tarot Readings by Swati Bhatt",
+    title: "Aurazone — Tarot Readings by Swati bhatt",
     description:
       "Certified tarot readings with 8+ years of experience. Find clarity in love, career & life.",
   },

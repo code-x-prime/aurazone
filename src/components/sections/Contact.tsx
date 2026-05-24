@@ -24,7 +24,6 @@ type FormValues = {
 };
 
 const READING_TYPES = [
-  "Single Question",
   "Love & Relationships",
   "Career & Finance",
   "Marriage Compatibility",
@@ -42,18 +41,24 @@ export function Contact() {
     reset,
   } = useForm<FormValues>();
   const [sent, setSent] = useState(false);
+  const [error, setError] = useState(false);
 
   const onSubmit = async (data: FormValues) => {
-    // TODO: Replace with backend endpoint (e.g., POST /api/contact, or service like Resend / Formspree).
-    const body = `Name: ${data.name}%0D%0AEmail: ${data.email}%0D%0APhone: ${data.phone}%0D%0AReading: ${data.readingType}%0D%0A%0D%0A${data.message}`;
-    const mailto = `mailto:swatibhatt18.sb@gmail.com?subject=Aurazone%20Booking%20—%20${encodeURIComponent(data.readingType)}&body=${body}`;
-    window.location.href = mailto;
-    console.log("[Aurazone booking]", data);
-    setSent(true);
-    setTimeout(() => {
-      setSent(false);
+    setError(false);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      if (!res.ok) throw new Error("Failed");
+      setSent(true);
       reset();
-    }, 4000);
+      setTimeout(() => setSent(false), 5000);
+    } catch {
+      setError(true);
+      setTimeout(() => setError(false), 5000);
+    }
   };
 
   return (
@@ -87,8 +92,8 @@ export function Contact() {
             <InfoRow
               icon={<IconMail size={20} stroke={1.5} />}
               label="Email"
-              value="swatibhatt18.sb@gmail.com"
-              href="mailto:swatibhatt18.sb@gmail.com"
+              value="aurazone0006@gmail.com"
+              href="mailto:aurazone0006@gmail.com"
             />
             <InfoRow
               icon={<IconPhone size={20} stroke={1.5} />}
@@ -124,8 +129,8 @@ export function Contact() {
             <InfoRow
               icon={<IconBrandInstagram size={20} stroke={1.5} />}
               label="Instagram"
-              value="@aurazone.in"
-              href="https://instagram.com/aurazone.in"
+              value="@aurazone0006"
+              href="https://www.instagram.com/aurazone0006"
               external
             />
             <div className="glass rounded-xl p-5 flex items-start gap-4">
@@ -216,15 +221,22 @@ export function Contact() {
                 <p className="text-xs text-mystic-mist font-serif">
                   By submitting you agree to be contacted about your reading.
                 </p>
-                <Button
-                  type="submit"
-                  size="lg"
-                  disabled={isSubmitting || sent}
-                  className="hover:shadow-[0_0_30px_rgba(178,34,34,0.55)]"
-                  icon={sent ? <IconCircleCheck size={16} stroke={1.5} /> : <IconSend size={16} stroke={1.5} />}
-                >
-                  {sent ? "Message Sent" : isSubmitting ? "Sending..." : "Send & Book"}
-                </Button>
+                <div className="flex flex-col items-end gap-2">
+                  {error && (
+                    <p className="text-xs text-red-400 font-serif">
+                      Something went wrong. Try WhatsApp instead.
+                    </p>
+                  )}
+                  <Button
+                    type="submit"
+                    size="lg"
+                    disabled={isSubmitting || sent}
+                    className="hover:shadow-[0_0_30px_rgba(178,34,34,0.55)]"
+                    icon={sent ? <IconCircleCheck size={16} stroke={1.5} /> : <IconSend size={16} stroke={1.5} />}
+                  >
+                    {sent ? "Message Sent ✓" : isSubmitting ? "Sending..." : "Send & Book"}
+                  </Button>
+                </div>
               </div>
             </form>
           </motion.div>

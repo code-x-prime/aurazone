@@ -7,7 +7,8 @@ import {
   IconRings,
   IconHourglass,
   IconFlower,
-  IconZodiacLeo,
+  // IconZodiacLeo,
+  IconDiamond,
   type Icon as TablerIcon,
 } from "@tabler/icons-react";
 import { GlassCard } from "@/components/ui/GlassCard";
@@ -50,11 +51,17 @@ const SERVICES: Service[] = [
       "Quiet, intentional energy work for periods that feel heavy, stuck, or disconnected from yourself.",
     Icon: IconFlower,
   },
+  // {
+  //   title: "Birth Chart Analysis",
+  //   blurb:
+  //     "A full reading of your natal chart — the map of who you came in as, and who you are becoming.",
+  //   Icon: IconZodiacLeo,
+  // },
   {
-    title: "Birth Chart Analysis",
+    title: "Crystal Healing & Gemstone Recommendations",
     blurb:
-      "A full reading of your natal chart — the map of who you came in as, and who you are becoming.",
-    Icon: IconZodiacLeo,
+      "Personalised crystal selection and healing guidance — stones chosen for your energy, intentions, and the season you are moving through.",
+    Icon: IconDiamond,
   },
 ];
 

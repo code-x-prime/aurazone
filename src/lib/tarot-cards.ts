@@ -4,7 +4,7 @@ export type TarotCard = {
   arcana: string;
   meaning: string;
   keywords: string[];
-  symbol: "moon" | "sun" | "star" | "tower" | "lovers";
+  symbol: "moon" | "sun" | "star" | "tower" | "lovers" | "pentacles" | "magician";
 };
 
 export const TAROT_CARDS: TarotCard[] = [
@@ -18,13 +18,22 @@ export const TAROT_CARDS: TarotCard[] = [
     symbol: "moon",
   },
   {
-    id: "the-star",
-    name: "The Star",
-    arcana: "Major Arcana · XVII",
+    id: "ace-of-pentacles",
+    name: "Ace of Pentacles",
+    arcana: "Minor Arcana · Pentacles",
     meaning:
-      "After a long night, hope arrives quietly. Healing is already in motion — keep faith in the path even when you cannot yet see it.",
-    keywords: ["Hope", "Renewal", "Faith"],
-    symbol: "star",
+      "A new beginning in the material world — prosperity, opportunity, and grounded abundance are within reach. Plant the seed with intention.",
+    keywords: ["Abundance", "Opportunity", "Manifestation"],
+    symbol: "pentacles",
+  },
+  {
+    id: "the-magician",
+    name: "The Magician",
+    arcana: "Major Arcana · I",
+    meaning:
+      "All tools are in your hands. The power to shape your reality is not coming — it is already here. Channel your will with focus.",
+    keywords: ["Willpower", "Skill", "Manifestation"],
+    symbol: "magician",
   },
   {
     id: "the-sun",

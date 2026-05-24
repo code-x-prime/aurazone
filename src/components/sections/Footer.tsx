@@ -1,8 +1,7 @@
+import Image from "next/image";
 import {
   IconMoon,
   IconBrandInstagram,
-  IconBrandFacebook,
-  IconBrandYoutube,
   IconBrandWhatsapp,
 } from "@tabler/icons-react";
 
@@ -25,9 +24,7 @@ const SERVICE_LINKS = [
 ];
 
 const SOCIALS = [
-  { href: "https://instagram.com/aurazone.in", label: "Instagram", icon: IconBrandInstagram },
-  { href: "https://facebook.com", label: "Facebook", icon: IconBrandFacebook },
-  { href: "https://youtube.com", label: "YouTube", icon: IconBrandYoutube },
+  { href: "https://www.instagram.com/aurazone0006", label: "Instagram", icon: IconBrandInstagram },
   { href: "https://wa.me/919999627129", label: "WhatsApp", icon: IconBrandWhatsapp },
 ];
 
@@ -46,15 +43,21 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2.5 mb-4">
-              <IconMoon size={20} stroke={1.5} className="text-gold-primary" />
+            <div className="flex items-center gap-3 mb-4">
+              <Image
+                src="/logo.jpeg"
+                alt="Aurazone"
+                width={52}
+                height={52}
+                className="rounded-full object-cover ring-2 ring-gold-primary/50"
+              />
               <span className="font-display text-xl tracking-[0.3em] text-gold-gradient font-semibold">
                 AURAZONE
               </span>
             </div>
             <p className="font-serif text-mystic-mist text-sm leading-relaxed">
               Where the stars speak through the cards. Certified tarot readings
-              and spiritual guidance by Swati Bhatt.
+              and spiritual guidance by Swati bhatt.
             </p>
             <div className="mt-6 flex gap-3">
               {SOCIALS.map((s, i) => {
@@ -67,11 +70,10 @@ export function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={s.label}
-                    className={`h-10 w-10 rounded-full border flex items-center justify-center transition-all ${
-                      isRed
-                        ? "border-red-accent/70 text-red-glow hover:bg-red-gradient hover:text-star-white hover:border-transparent"
-                        : "border-gold-primary/40 text-gold-soft hover:bg-gold-gradient hover:text-galaxy-black hover:border-transparent"
-                    }`}
+                    className={`h-10 w-10 rounded-full border flex items-center justify-center transition-all ${isRed
+                      ? "border-red-accent/70 text-red-glow hover:bg-red-gradient hover:text-star-white hover:border-transparent"
+                      : "border-gold-primary/40 text-gold-soft hover:bg-gold-gradient hover:text-galaxy-black hover:border-transparent"
+                      }`}
                   >
                     <I size={16} stroke={1.5} />
                   </a>
@@ -125,8 +127,8 @@ export function Footer() {
             </h4>
             <ul className="space-y-2.5 text-sm text-mystic-mist">
               <li>
-                <a href="mailto:swatibhatt18.sb@gmail.com" className="hover:text-gold-soft transition-colors break-all">
-                  swatibhatt18.sb@gmail.com
+                <a href="mailto:aurazone0006@gmail.com" className="hover:text-gold-soft transition-colors break-all">
+                  aurazone0006@gmail.com
                 </a>
               </li>
               <li>
@@ -148,7 +150,7 @@ export function Footer() {
 
         <div className="mt-14 pt-6 border-t border-gold-primary/20 flex flex-col md:flex-row items-center justify-between gap-3">
           <p className="text-xs text-mystic-mist flex items-center gap-2">
-            © 2026 Aurazone · Crafted with intention by Swati Bhatt
+            © 2026 Aurazone · Crafted with intention by Swati bhatt
             <IconMoon size={12} stroke={1.5} className="text-gold-soft inline" />
           </p>
           <div className="flex gap-5 text-[10px] uppercase tracking-[0.3em] text-mystic-mist/70">
